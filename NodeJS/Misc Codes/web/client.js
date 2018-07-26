@@ -10,7 +10,8 @@ const options =
 
 console.log("attempting request to "+options.host);
 
-var req = http.request('http://www.google.com/', function(response) {
+//var req = http.request('http://www.google.com/', function(response) {     //getting error at office due to proxy probably
+let req = http.request(options, function(response) {
     console.log(response.statusCode);
     response.pipe(process.stdout);
 });
