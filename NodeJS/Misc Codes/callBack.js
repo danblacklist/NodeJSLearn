@@ -13,6 +13,14 @@ var evendoubler = function(v, callback){
     }
 };
 
+let evendoublersync = function (v) {
+    if (v%2) {
+        throw (new Error("Odd input"));
+    } else {
+        return v*2;
+    }
+};
+
 // var processResults = function(err, results, time) {
 //     if (err) {
 //         console.log("ERROR: " + err.message +" "+ time+" ms");
@@ -36,4 +44,7 @@ console.log("Done !!!");
 })
 };
 console.log("-----");
+
+module.exports.evendoubler = evendoubler;
+module.exports.evendoublersync = evendoublersync;
 
